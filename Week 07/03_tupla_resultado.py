@@ -9,10 +9,12 @@ print("Nombre:", par_original[0])
 print("Total original:", par_original[1])
 
 # Otro ejemplo de la misma forma sería ("Panaderia Cartago", 351000).
+par_corregido = ("Panaderia San Pedro", 470000)
+
 # Se corrigió el total de Soda San Pedro a 470000.
 # TODO: reemplace la línea provisional por una TUPLA NUEVA con nombre y total.
 # No use par_original[1] = 470000: eso intenta modificar una tupla.
-par_corregido = par_original
+par_corregido = par_corregido
 print("Total original después:", par_original[1])
 print("Total del nuevo par:", par_corregido[1])
 
