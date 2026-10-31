@@ -1,7 +1,7 @@
 """Reto integrador: control de ingreso al Anfiteatro del CENAC.
 
-Nombre del estudiante: __________________________________________
-Fecha: ____________________
+Nombre del estudiante: Katherine Barrantes
+Fecha: Oct 23, 2026
 
 Contexto:
 Se analizará el ingreso de grupos a un evento en el Anfiteatro del CENAC, Costa Rica.
@@ -104,41 +104,92 @@ Otros casos para probar:
 
 # Desarrolle su solución a partir de esta línea.
 
+# RETO INTEGRADOR: CONTROL DE INGRESO AL ANFITEATRO DEL CENAC
+# Nombre: Katherine Barrantes
+# Fecha: Oct 23, 2026
+
 grupos_aceptados = []
 grupos_rechazados = []
-capacidad_maxima = 0
+ocupacion_actual = 0
+capacidad_maxima = 700
 
-entrada = input("Favor ingrese el numero de grupo de personas (o fin para terminar): ").strip().lower()
+entrada = input("Ingrese el numero de personas del grupo (o fin para terminar): ").strip().lower()
 
 while entrada != "fin":
     try:
         grupo = int(entrada)
-        capacidad_maxima = capacidad_maxima + grupo
-        if capacidad_maxima <= 700: 
+
+        if grupo <= 0:
+            print("Entrada invalida: ingrese un entero mayor que cero.")
+
+        elif ocupacion_actual + grupo <= capacidad_maxima:
             grupos_aceptados.append(grupo)
-            print("Grupo aceptado")
-            
+            ocupacion_actual = ocupacion_actual + grupo
+            print(f"Grupo aceptado: ingresan {grupo} personas.")
+
         else:
             grupos_rechazados.append(grupo)
-            capacidad_maxima = capacidad_maxima - grupo
-            print("Grupo rechazado")
-        print(f"Ocupacion actual: {capacidad_maxima}")
-        print("Espacios disponibles: {700 - capacidad_maxima} \n")
+            print(f"Grupo rechazado: no hay espacio para {grupo} personas.")
+
+        if grupo > 0:
+            print(f"Ocupacion actual: {ocupacion_actual}")
+            print(f"Espacios disponibles: {capacidad_maxima - ocupacion_actual}")
+            print()
+
     except ValueError:
-        grupo = -1
-    entrada = input("Favor ingrese el numero de grupo de personas (o fin para terminar): ").strip().lower()
+        print("Entrada invalida: escriba un numero entero positivo o fin.")
 
+    entrada = input("Ingrese el numero de personas del grupo (o fin para terminar): ").strip().lower()
+
+
+# CALCULAR EL TOTAL DE PERSONAS ADMITIDAS
 personas_admitidas = 0
-for grupos in grupos_aceptados:
-    personas_admitidas = personas_admitidas + grupos
-    
+
+for grupo in grupos_aceptados:
+    personas_admitidas = personas_admitidas + grupo
+
+
+# CALCULAR EL REPORTE FINAL
 cantidad_aceptados = len(grupos_aceptados)
+cantidad_rechazados = len(grupos_rechazados)
+espacios_disponibles = capacidad_maxima - ocupacion_actual
+porcentaje_ocupacion = (personas_admitidas / capacidad_maxima) * 100
 
-print("Reporte Final")
-print("-"*10,"\n")
-print(f"Grupos aceptados: {cantidad_aceptadas}")
-print(grupos_aceptados)
-print(grupos_rechazados)
-print(personas_admitidas)
+print("\nREPORTE FINAL")
+print("-" * 30)
+print(f"Grupos aceptados: {cantidad_aceptados}")
+print(f"Lista de grupos aceptados: {grupos_aceptados}")
+print(f"Grupos rechazados: {cantidad_rechazados}")
+print(f"Lista de grupos rechazados: {grupos_rechazados}")
+print(f"Personas admitidas: {personas_admitidas}")
+print(f"Capacidad maxima: {capacidad_maxima}")
+print(f"Espacios disponibles: {espacios_disponibles}")
+print(f"Porcentaje de ocupacion: {porcentaje_ocupacion:.2f}%")
 
+
+# EXTENSIONES: GRUPO MAS PEQUENO Y MAS GRANDE
+if cantidad_aceptados > 0:
+    grupo_mas_pequeno = grupos_aceptados[0]
+    grupo_mas_grande = grupos_aceptados[0]
+
+    for grupo in grupos_aceptados:
+        if grupo < grupo_mas_pequeno:
+            grupo_mas_pequeno = grupo
+
+        if grupo > grupo_mas_grande:
+            grupo_mas_grande = grupo
+
+    print(f"Grupo aceptado mas pequeno: {grupo_mas_pequeno}")
+    print(f"Grupo aceptado mas grande: {grupo_mas_grande}")
+else:
+    print("No hubo grupos aceptados.")
+
+
+# CLASIFICAR EL ESTADO FINAL
+if ocupacion_actual == capacidad_maxima:
+    print("Estado final: capacidad completa.")
+elif ocupacion_actual > 0:
+    print("Estado final: ocupacion normal.")
+else:
+    print("Estado final: recinto vacio.")
 
