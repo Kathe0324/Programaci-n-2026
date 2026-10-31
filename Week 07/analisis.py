@@ -9,6 +9,17 @@ print("\nAnalisis Semanal de Emprendimientos")
 
 print("\nANÁLISIS SEMANAL DE EMPREDIMIENTOS")
 
+from sedes import sedes
+
+#Acceso a a listas de sesde de emprenimientos
+print("Sedes registradas:", len(sedes))
+print("Primera sede:", sedes[0]['nombre'])
+print("Ventas de la primera sede:", sedes[0]["ventas"])
+
+print("\nANÁLISIS SEMANAL DE EMPREDIMIENTOS")
+
+provincias = set()
+
 for sede in sedes:
     total = sum(sede["ventas"])
     porcentaje = total / sede['meta'] * 100
@@ -25,3 +36,5 @@ for sede in sedes:
         f"{sede['nombre']} | Total:₡{total:,.2f} | "
         f"Cumpliento: {porcentaje:.2f}% | {estado}"
     )
+    provincias.add(sede["provincia"])
+print("Set de provincias:", provincias)
