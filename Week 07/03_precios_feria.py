@@ -16,7 +16,7 @@ contador = 0
 while indice < len(precios):
     if precios[indice] > promedio:
         contador += 1
-indice += 1
+    indice += 1
 if rango >= 300:
     clasificacion = "Variación alta"
 elif rango >= 150:
@@ -35,3 +35,10 @@ print("Precios sobre el promedio: ", contador)
 print("Su clasificación es:", clasificacion)
 # Prueba de código: use temporalmente cinco precios iguales y compruebe que
 # el rango sea cero y ninguno supere el promedio. Restaure la lista.
+#El producto es:  Tomate
+#El promedio es: 900.0
+#El mínimo es:  900
+#El máximo es:  900
+#El rango es:  0
+#Precios sobre el promedio:  0
+#Su clasificación es: Variación baja
