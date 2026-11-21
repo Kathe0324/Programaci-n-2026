@@ -1,19 +1,21 @@
 """Semana 10: resolvemos juntos el caso pendiente de la Semana 9."""
 
-from lector_csv import cargar_atenciones
+from lector_csv import cargar_atenciones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
 
 def explorar_atenciones(atenciones):
     """Decisión 1: ¿qué leímos y cuántas atenciones hay?"""
     # Contamos las filas con un for. Luego miramos los campos de la primera.
+    total_len = len(atenciones)
     cantidad = 0
     for atencion in atenciones:
-        # Completamos aquí el contador.
-        pass
+        cantidad += 1  # Completamos aquí el contador.
 
     print("Atenciones:", cantidad)
+    print("Atenciones len: ", total_len)
     print("Campos:", list(atenciones[0]))
-
+        #Tipo de atenciones
+    print("Tipo de atenciones: ", type(atenciones))
 
 def contar_categorias(atenciones):
     """Decisión 2: ¿qué medicamentos, hospitales y diagnósticos aparecen?"""
@@ -24,8 +26,20 @@ def contar_categorias(atenciones):
     for atencion in atenciones:
         # Los nombres ya vienen uniformes en el CSV.
         # Contamos cada categoría en su diccionario con .get().
-        pass
-
+        medicamento = atencion['medicamento']
+        if medicamento not in medicamentos:
+            medicamentos[medicamento] = 0 #AQUI SE AGREGA EL REGISTRO AL DICCIONARIO.
+        #else: si quiero lo pongo    
+        medicamentos[medicamento] += 1
+        
+        #get
+        hospital = atencion['hospital']
+        #Hospitales['San Juan de Dios']
+        hospitales[hospital] = hospitales.get(hospital, 0) + 1
+        
+        diagnostico = atencion['diagnostico']
+        diagnosticos[diagnostico] = diagnosticos.get(diagnostico, 0) + 1
+        
     print("Medicamentos:", medicamentos)
     print("Hospitales:", hospitales)
     print("Diagnósticos:", diagnosticos)
