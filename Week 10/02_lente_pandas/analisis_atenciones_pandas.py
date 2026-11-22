@@ -8,7 +8,7 @@ ARCHIVO_CSV = Path(__file__).with_name("atenciones.csv")
 
 def explorar_atenciones(atenciones):
     print('Atenciones: ', len(atenciones))
-    print('Ti[po de Atenciones: ', type(atenciones))
+    print('Tipo de Atenciones: ', type(atenciones))
     print("Campos: ", list(atenciones.columns))
 
 def contar_categorias(atenciones):

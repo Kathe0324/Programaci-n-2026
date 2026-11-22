@@ -1,0 +1,32 @@
+﻿Cuenta,Cliente,Fecha,Procesador,Monto,Razon,Metodo
+1427818,Aguilar Matarrita,5/8/2026,Adyen,"$541,841.00",Fraude,VISA
+1544286,Alfaro Ulate,11/22/2026,BAC,"$14,841.00",Robo de tarjeta,MASTERCARD
+5815831,Arias Campos,4/8/2026,Braintree,$141.00,no reconocio trasaccion,AMEX
+3345815,Azofeifa Calvo,8/31/2026,Checkout.com,"$14,588.00",monto incorrecto,DISCOVER
+7239821.5,Bojorge Villarreal,5/8/2026,dLocal,$88.50,Fondos insuficientes,CYPTO
+8252375.1,Calderon Sancho,11/22/2026,Evertec,$448.33,Cargo Duplicado,ZELL
+9264928.7,Cernas Gomez,4/8/2026,FIS,"$10,000.00",No reconocio descripcion de cargo,PAYPAL
+10748910.87,Chacon Chacon,8/31/2026,Fiserv,$100.00,Fraude,DISCOVER
+12118607.33,Chacon Valerio,5/8/2026,Getnet,$21.00,Robo de tarjeta,CYPTO
+13488303.79,Diaz Artavia,11/22/2026,aureavia,$47.00,no reconocio trasaccion,ZELL
+14858000.24,Duran Guerrero,4/8/2026,Izipay,$177.00,monto incorrecto,MASTERCARD
+16227696.7,Fonseca Alfaro,8/31/2026,TONI,"$555,320.44",Fondos insuficientes,AMEX
+17597393.16,Francia Porras,5/8/2026,Niubiz,"$633,513.98",Cargo Duplicado,DISCOVER
+18967089.61,Jimenez Venegas,11/22/2026,ONVO Pay,"$711,707.52",No reconocio descripcion de cargo,VISA
+20336786.07,Lapentty Flores,4/8/2026,PayPal,"$789,901.06",Fraude,MASTERCARD
+21706482.53,Lopez Gutierrez,8/31/2026,PayU,"$868,094.59",Robo de tarjeta,AMEX
+23076178.99,Molina Wolfe,5/8/2026,Square,"$1,485.00",no reconocio trasaccion,DISCOVER
+24445875.44,Monge Oporta,11/22/2026,Stripe,"$17,781.00",monto incorrecto,CYPTO
+25815571.9,Mora Hidalgo,4/8/2026,Tilopay,"$1,102,675.21",Fondos insuficientes,ZELL
+27185268.36,Pasos Rojas,8/31/2026,Transbank,"$1,754.00",Cargo Duplicado,PAYPAL
+28554964.81,Porras Alfaro,5/8/2026,Wompi,$40.00,No reconocio descripcion de cargo,DISCOVER
+29924661.27,Ramirez Villalobos,11/22/2026,Worldpay,$44.00,Fraude,CYPTO
+31294357.73,Reina Herrera,4/8/2026,Fiserv,"$4,741.00",Robo de tarjeta,ZELL
+32664054.19,Rodriguez Teran,8/31/2026,Getnet,"$1,493,642.90",no reconocio trasaccion,MASTERCARD
+34033750.64,Rosales Lopez,5/8/2026,Global Payments,$121.00,monto incorrecto,AMEX
+35403447.1,Sanchez Chacon,11/22/2026,Izipay,"$1,587.00",Fondos insuficientes,DISCOVER
+36773143.56,Segura Araya,4/8/2026,CPAY,"$588,510.00",Cargo Duplicado,VISA
+38142840.01,Sereim Barreto,8/31/2026,Niubiz,"$20,000.00",No reconocio descripcion de cargo,MASTERCARD
+39512536.47,Villalta Vargas,5/8/2026,BAC Credomatic,"$125,478.00",Fraude,AMEX
+40882232.93,Villarreal Morales,11/22/2026,Braintree,$5.00,Robo de tarjeta,DISCOVER
+42251929.39,Zuñiga Castro,4/8/2026,Checkout.com,$6.00,no reconocio trasaccion,CYPTO
