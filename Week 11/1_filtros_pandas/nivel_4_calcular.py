@@ -10,15 +10,19 @@ NIVEL 4 · HUECOS Y UN PASO SOLO. En el 1 hay dos huecos: qué columna se toma (
 cálculo se hace (el promedio de una columna se llama mean). El 2 lo escribe usted.
 Ejecute desde la carpeta material_estudiante:  python 1_filtros_pandas/nivel_4_calcular.py
 """
-import pandas as pd
+import pandas as pd 
 
-notas = pd.read_csv("notas.csv")
+from pathlib import Path
+
+ARCHIVO_CSV = Path(__file__).with_name("notas.csv")
+
+notas = pd.read_csv(ARCHIVO_CSV)
 
 # 1. Promedio de la columna examen (complete los dos huecos)
-promedio_examen = notas[____].____()
+promedio_examen = notas["examen"].mean()
 
 # 2. Ahora usted solo: promedio de la columna tarea
-promedio_tarea = 0      # reemplace el 0 por su código
+promedio_tarea = notas["tarea"].mean()      # reemplace el 0 por su código
 
 # 3. Mire los resultados (estas líneas ya están listas)
 print("Examen:", round(promedio_examen, 2))

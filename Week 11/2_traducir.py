@@ -11,7 +11,7 @@ def contar_aprobados_nativo(filas: list, minimo: float) -> int:
     """Versión resuelta. 'filas' es una lista de diccionarios con 'promedio'."""
     cantidad = 0
     for fila in filas:
-        if fila["promedio"] >= minimo:
+        if fila >= minimo:
             cantidad += 1
     return cantidad
 
@@ -31,3 +31,7 @@ def promedio_examen_nativo(filas: list) -> float:
     """TODO: haga lo mismo con un ciclo for y un acumulador.
     'filas' es una lista de diccionarios con la clave 'examen'."""
     return 0.0
+
+lista = [60,80,100,90,42,50]
+print(contar_aprobados_nativo(lista, 70))
+

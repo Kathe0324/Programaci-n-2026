@@ -20,9 +20,12 @@ def notas_con_promedio(ruta):
     """Notas con la columna 'promedio'."""
     notas = cargar_notas(ruta)    # cascada: usamos la función del nivel 5
     # su código aquí
+    filtro = ['tarea', 'practica', 'examen', 'proyecto']
+    notas['promedio'] = notas[filtro].mean(axis=1)
     return notas
 
 
 if __name__ == "__main__":
     notas = notas_con_promedio("notas.csv")
-    print(notas[["nombre", "promedio"]].head(3))
+    #print(notas[["nombre", "promedio"]].head(3))
+    print(notas)

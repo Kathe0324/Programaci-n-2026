@@ -19,9 +19,13 @@ def aprobados(ruta, minimo):
     """Estudiantes con promedio mayor o igual que 'minimo'."""
     notas = notas_con_promedio(ruta)    # cascada: nivel 6
     # su código aquí
+    filtro = notas['promedio'] >= minimo
+    notas = notas[filtro]
+    print(filtro)
     return notas
 
 
 if __name__ == "__main__":
     resultado = aprobados("notas.csv", 70)
     print("Estudiantes:", len(resultado))
+    print(resultado)
